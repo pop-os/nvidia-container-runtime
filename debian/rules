@@ -5,3 +5,8 @@
 
 %:
 	dh $@
+
+override_dh_auto_build:
+	ln -sTf . src/vendor/src
+	GOCACHE="$$(pwd)/gocache" GOPATH="$$(pwd)/src/vendor" make -C src build
+	cp src/nvidia-container-runtime .

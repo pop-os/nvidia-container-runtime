@@ -1,16 +1,16 @@
 Source: nvidia-container-runtime
-Section: @SECTION@utils
+Section: utils
 Priority: optional
 Maintainer: NVIDIA CORPORATION <cudatools@nvidia.com>
 Standards-Version: 3.9.8
 Homepage: https://github.com/NVIDIA/nvidia-container-runtime/wiki
 Vcs-Git: https://github.com/NVIDIA/nvidia-container-runtime
 Vcs-Browser: https://github.com/NVIDIA/nvidia-container-runtime
-Build-Depends: debhelper (>= 9)
+Build-Depends: debhelper (>= 9), golang
 
 Package: nvidia-container-runtime
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, nvidia-container-toolkit (>= @TOOLKIT_VERSION@), nvidia-container-toolkit (<< 2.0.0), libseccomp2
+Depends: ${shlibs:Depends}, ${misc:Depends}, nvidia-container-toolkit (>= 1.3.0), nvidia-container-toolkit (<< 2.0.0), libseccomp2
 Description: NVIDIA container runtime
  Provides a modified version of runc allowing users to run GPU enabled
  containers.
