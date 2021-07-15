@@ -40,6 +40,24 @@ install -m 755 -t %{buildroot}%{_bindir} nvidia-container-runtime
 %{_bindir}/nvidia-container-runtime
 
 %changelog
+* Thu Apr 29 2021 NVIDIA CORPORATION <cudatools@nvidia.com> 3.5.0-1
+- Add dependence on nvidia-container-toolkit >= 1.5.0
+- Refactor the whole project for easier extensibility in the future
+- Move main to cmd/nvidia-container-runtime to make it go-installable
+- Switch to logrus for logging and refactor how logging is done
+- Update to Golang 1.16.3
+- Improvements to build and CI system
+- Reorganize the code structure and format it correctly
+
+* Fri Feb 05 2021 NVIDIA CORPORATION <cudatools@nvidia.com> 3.4.2-1
+- Add dependence on nvidia-container-toolkit >= 1.4.2
+
+* Mon Jan 25 2021 NVIDIA CORPORATION <cudatools@nvidia.com> 3.4.1-1
+- Update README to list 'compute' as part of the default capabilities
+- Switch to gomod for vendoring
+- Update to Go 1.15.6 for builds
+- Add dependence on nvidia-container-toolkit >= 1.4.1
+
 * Wed Sep 16 2020 NVIDIA CORPORATION <cudatools@nvidia.com> 3.4.0-1
 - Bump version to v3.4.0
 - Add dependence on nvidia-container-toolkit >= 1.3.0

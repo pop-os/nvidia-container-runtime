@@ -1,3 +1,6 @@
 dist
 *.swp
 *.swo
+test/output
+/runc
+/nvidia-container-runtime
